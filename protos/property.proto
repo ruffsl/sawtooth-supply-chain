@@ -70,6 +70,7 @@ message PropertySchema {
     INT = 2;
     FLOAT = 3;
     LOCATION = 4;
+    CHECKPOINTS = 5;
   }
 
   // The name of the property, e.g. "temperature"
@@ -99,6 +100,7 @@ message PropertyValue {
   sint64 int_value = 13;
   float float_value = 14;
   Location location_value = 15;
+  Checkpoints checkpoints = 16;
 }
 
 
@@ -118,6 +120,7 @@ message PropertyPage {
     sint64 int_value = 13;
     float float_value = 14;
     Location location_value = 15;
+    Checkpoints checkpoints = 16;
   }
 
   // The name of the page's associated Property and the record_id of
@@ -141,4 +144,14 @@ message Location {
   // Coordinates are expected to be in millionths of a degree
   sint64 latitude = 1;
   sint64 longitude = 2;
+}
+
+message Checkpoint {
+  // Checkpoint indexs are expected to be monotonically increasing
+  sint64 index = 1;
+  sint64 digest = 2;
+}
+
+message Checkpoints {
+  repeated Checkpoint checkpoints = 1;
 }
