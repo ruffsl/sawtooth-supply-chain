@@ -21,7 +21,6 @@ directories="
     build
     integration
     fish_client/node_modules
-    asset_client/node_modules
 "
 
 for dir in $directories
