@@ -33,6 +33,11 @@
         {
           "name": "shock",
           "dataType": 1
+        },
+        {
+          "name": "checkpoints",
+          "dataType": 5,
+          "required": true
         }
     ]
   }

@@ -45,7 +45,9 @@ const compile = () => {
       'PropertyPageContainer',
       'PropertySchema',
       'PropertyValue',
-      'Location'
+      'Location',
+      'Checkpoints',
+      'Checkpoints'
     ]),
     loadProtos('proposal.proto', [
       'Proposal',

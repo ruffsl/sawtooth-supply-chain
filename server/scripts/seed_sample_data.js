@@ -100,6 +100,9 @@ protos.compile()
         if (property.dataType === protos.PropertySchema.DataType.LOCATION) {
           property.locationValue = protos.Location.create(property.locationValue)
         }
+        if (property.dataType === protos.PropertySchema.DataType.CHECKPOINTS) {
+          property.checkpointsValue = protos.Checkpoints.create(property.checkpointsValue)
+        }
         return protos.PropertyValue.create(property)
       })
 

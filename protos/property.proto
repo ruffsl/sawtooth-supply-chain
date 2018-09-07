@@ -100,7 +100,7 @@ message PropertyValue {
   sint64 int_value = 13;
   float float_value = 14;
   Location location_value = 15;
-  Checkpoints checkpoints = 16;
+  Checkpoints checkpoints_value = 16;
 }
 
 
@@ -120,7 +120,7 @@ message PropertyPage {
     sint64 int_value = 13;
     float float_value = 14;
     Location location_value = 15;
-    Checkpoints checkpoints = 16;
+    Checkpoints checkpoints_value = 16;
   }
 
   // The name of the page's associated Property and the record_id of
@@ -148,8 +148,8 @@ message Location {
 
 message Checkpoint {
   // Checkpoint indexs are expected to be monotonically increasing
-  sint64 index = 1;
-  sint64 digest = 2;
+  uint64 index = 1;
+  bytes digest = 2;
 }
 
 message Checkpoints {

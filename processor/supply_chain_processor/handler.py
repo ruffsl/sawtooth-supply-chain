@@ -834,6 +834,8 @@ def _make_new_reported_value(reporter_index, timestamp, prop):
     if attribute == 'location_value':
         reported_value.location_value.latitude = prop.location_value.latitude
         reported_value.location_value.longitude = prop.location_value.longitude
+    elif attribute == 'checkpoints_value':
+        reported_value.checkpoints_value.CopyFrom(prop.checkpoints_value)
     else:
         setattr(
             reported_value,
@@ -849,6 +851,7 @@ DATA_TYPE_TO_ATTRIBUTE = {
     PropertySchema.INT: 'int_value',
     PropertySchema.FLOAT: 'float_value',
     PropertySchema.LOCATION: 'location_value',
+    PropertySchema.CHECKPOINTS: 'checkpoints_value',
 }
 
 
