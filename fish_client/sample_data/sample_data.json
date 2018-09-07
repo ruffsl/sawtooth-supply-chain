@@ -5,29 +5,6 @@
       "recordType": "fish",
       "properties": [
           {
-            "name": "species",
-            "dataType": 1,
-            "stringValue": "BFT"
-          },
-          {
-            "name": "length",
-            "dataType": 2,
-            "intValue": 2257000
-          },
-          {
-            "name": "weight",
-            "dataType": 2,
-            "intValue": 247096000
-          },
-          {
-            "name": "location",
-            "dataType": 4,
-            "locationValue": {
-              "latitude": 42456486,
-              "longitude": -67982434
-            }
-          },
-          {
             "name": "checkpoints",
             "dataType": 5,
             "checkpointsValue": [
