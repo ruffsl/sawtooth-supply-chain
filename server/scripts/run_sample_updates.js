@@ -77,7 +77,7 @@ const updateValue = (update, oldValue) => {
 
 const updateProperty = (update, oldValue) => {
   oldValue = oldValue || update.startValue || null
-  const { INT, FLOAT, LOCATION } = protos.PropertySchema.DataType
+  const { INT, FLOAT, LOCATION, CHECKPOINTS } = protos.PropertySchema.DataType
   const property = _.pick(update, 'name', 'dataType')
 
   if (property.dataType === INT) {
